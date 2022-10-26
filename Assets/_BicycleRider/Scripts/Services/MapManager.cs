@@ -171,7 +171,7 @@ namespace BicycleRider
             }
             else
             {
-                Vector3 positionNewPiece = (Vector2)mapPieces[mapPieces.Count - 1].transform.position + new Vector2(0, mapPieces[mapPieces.Count - 1].transform.position.y + distanceSpawnMap);
+                Vector3 positionNewPiece = (Vector2)mapPieces[mapPieces.Count - 1].transform.position + new Vector2(0, distanceSpawnMap);
                 var map = Instantiate(mapPiecesPrefabs[randomIndex].gameObject, positionNewPiece, Quaternion.identity);
                 mapPieces.Add(map.GetComponent<MapPiece>());
             }
